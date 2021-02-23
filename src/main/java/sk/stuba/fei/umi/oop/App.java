@@ -5,43 +5,17 @@ import java.util.Arrays;
 
 public class App {
     public static void main(String[] args){
-        int x = 5;
-        int [] y = new int[]{1,2,3};
-        FakeStruktura z = new FakeStruktura();
+        int [][] pole =  new int[10][];
+        for (int i=0;i<pole.length;i++){
+            pole[i]=new int [i+1];
+            for (int j=0;j<pole[i].length;j++){
+                pole[i][j]=j;
+            }
+        }
 
-        System.out.println(x);
-        pokusRaw(x);
-        System.out.println(x);
-
-        System.out.println(Arrays.toString(y));
-        pokusArray(y);
-        System.out.println(Arrays.toString(y));
-
-        System.out.println(z.x);
-        z.x=7;
-        System.out.println(z.x);
-        pokusObject(z);
-        System.out.println(z.x);
-    }
-    public static void pokusRaw(int cislo){
-        cislo = 7;
-        System.out.println(cislo);
+        for(int i=0;i<pole.length;i++){
+            System.out.println(Arrays.toString(pole[i]));
+        }
     }
 
-    public static void pokusArray(int[] array){
-        array[0]=10;
-        System.out.println(Arrays.toString(array));
-    }
-
-    public static void pokusObject(FakeStruktura struktura){
-        struktura.x= 10;
-        System.out.println(struktura.x);
-    }
-
-    public static FakeStruktura bod(){
-        FakeStruktura f  = new FakeStruktura();
-        f.y=10;
-        f.x=10;
-        return f;
-    }
 }

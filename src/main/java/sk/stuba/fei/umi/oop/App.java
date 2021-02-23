@@ -37,4 +37,11 @@ public class App {
         struktura.x= 10;
         System.out.println(struktura.x);
     }
+
+    public static FakeStruktura bod(){
+        FakeStruktura f  = new FakeStruktura();
+        f.y=10;
+        f.x=10;
+        return f;
+    }
 }
